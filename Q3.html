@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Enter Time : <input type="text" id="fn" /><br>
+        <input type="button" onClick="timeConvert()" Value="convert" />
+    </form>
+    <p>The Result is : <br>
+        <span id = "result"></span>
+    </p>
+    <script type="text/javascript">
+ function timeConvert() {
+ num =document.getElementById("fn").value;;
+var hours = (num / 60);
+var rhours = Math.floor(hours);
+var minutes = (hours - rhours) * 60;
+var rminutes = Math.round(minutes);
+document.getElementById("result").innerHTML= num + " minutes = " + rhours + " hour(s) and " + rminutes + " minute(s).";
+}
+
+console.log(timeConvert(200));
+    </script>
+</body>
+</html>
